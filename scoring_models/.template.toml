@@ -1,4 +1,4 @@
-scoring_model = "Base template"
+model_name = "Base template"
 
 [metadata]
 decimal = true
