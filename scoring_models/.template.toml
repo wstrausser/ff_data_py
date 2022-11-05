@@ -1,58 +1,59 @@
 model_name = "Base template"
+description = "This is a template for building a new scoring model. All available fields are listed in this document. For documentation on what each of these fields represents, please see documentation."
 
 [metadata]
 decimal = true
 ppr = false
 
-[turnovers]
+[committed_turnovers]
 fumble = 0
 fumble_lost = -1
 interception = -1
 
 [passing]
 yards = 0.02
-yards_step = 1
+yards_interval = 1
 touchdown = 4
 
     [passing.bonuses]
-    game_yardage_bonus_cutoff = 300
+    game_yardage_bonus_threshold = 300
     game_yardage_bonus = 2
-    game_yardage_secondary_bonus_step = 100
+    game_yardage_secondary_bonus_interval = 100
     game_yardage_secondary_bonus = 2
-    td_yardage_bonus_cutoff = 35
+    td_yardage_bonus_threshold = 35
     td_yardage_bonus = 2
 
 [receiving]
 yards = 0.05
-yards_step = 1
+yards_interval = 1
 touchdown = 6
 reception = 0
 
     [receiving.bonuses]
-    game_yardage_bonus_cutoff = 100
+    game_yardage_bonus_threshold = 100
     game_yardage_bonus = 2
-    game_yardage_secondary_bonus_step = 100
+    game_yardage_secondary_bonus_interval = 100
     game_yardage_secondary_bonus = 2
-    td_yardage_bonus_cutoff = 35
+    td_yardage_bonus_threshold = 35
     td_yardage_bonus = 3
 
 [rushing]
 yards = 0.05
-yards_step = 1
+yards_interval = 1
 touchdown = 6
 
     [rushing.bonuses]
-    game_yardage_bonus_cutoff = 100
+    game_yardage_bonus_threshold = 100
     game_yardage_bonus = 2
-    game_yardage_secondary_bonus_step = 100
+    game_yardage_secondary_bonus_interval = 100
     game_yardage_secondary_bonus = 2
-    td_yardage_bonus_cutoff = 35
+    td_yardage_bonus_threshold = 35
     td_yardage_bonus = 3
 
 [kicking]
 field_goal = 0.1
 field_goal_yards = 0.1
-field_goal_yards_step = 1
+field_goal_yards_interval = 1
 field_goal_miss = -1
 field_goal_miss_max_yards = 49
 extra_point = 1
@@ -81,8 +82,8 @@ extra_point_miss = -1
         {range_min = 15, range_max = 17, points = 0.5},
         {range_min = 18, range_max = 21, points = 0.25}
     ]
-    points_allowed_deduction_cutoff = 29
-    points_allowed_deduction_step = 1
+    points_allowed_deduction_threshold = 29
+    points_allowed_deduction_interval = 1
     points_allowed_deduction = -0.2
 
     yards_allowed = [
@@ -128,8 +129,8 @@ extra_point_miss = -1
         {range_min = 291, range_max = 295, points = 0.2},
         {range_min = 296, range_max = 300, points = 0.1}
     ]
-    yards_allowed_deduction_cutoff = 401
-    yards_allowed_deduction_step = 1
+    yards_allowed_deduction_threshold = 401
+    yards_allowed_deduction_interval = 1
     yards_allowed_deduction = -0.02
 
     [dst.special_teams]
