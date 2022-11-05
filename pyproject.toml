@@ -1,0 +1,10 @@
+[project]
+name = "ff_data_py"
+description = "Python package for retrieving data relevant to fantasy football."
+version = "0.1.0"
+authors = [
+    { name = "William Strausser", email = "william.e.strausser@gmail.com" }
+]
+dependencies = [
+    "nfl-data-py==0.3.0"
+]
