@@ -20,7 +20,7 @@ All fields in this section are merely for information purposes and do not impact
 ---
 
 ## `committed_turnovers`
-Point values for committed turnovers. Values here are universal and apply to offensive, defensive, and special teams players. In the case of defenses, these values are only applied in the rare case that a defensive player **commits** a turnover, not when they **force** a turnover (forced turnovers are in the `dst` section). That is, a defensiver player making an interception and subsequently fumbling the ball on the same play will receive a point value corresponding to the `interception` field in the `dst` section, followed by an additional (usually negative) point value according to the `fumble` field in this section.
+Scoring parameters for committed turnovers. Values here are universal and apply to offensive, defensive, and special teams players. In the case of defenses, these values are only applied in the rare case that a defensive player **commits** a turnover, not when they **force** a turnover (forced turnovers are in the `dst` section). That is, a defensiver player making an interception and subsequently fumbling the ball on the same play will receive a point value corresponding to the `interception` field in the `dst` section, followed by an additional (usually negative) point value according to the `fumble` field in this section.
 
 ### `fumble`
 *int* or *float* -- Point value awarded for a committed fumble, regardless of whether the fumble was recovered by the opposing team or not.
@@ -159,4 +159,33 @@ Point values for committed turnovers. Values here are universal and apply to off
 *int* or *float* -- Point value awarded for an unsuccessful extra point.
 
 ---
+
+## `dst`
+Scoring parameters for team-based defense/special teams scoring.
+
+## `dst.defense`
+
+### `touchdown`
+*int* or *float* -- Point value awarded for a defensive touchdown (on either an interception or fumble return).
+
+### `safety`
+*int* or *float* -- Point value awarded for a safety scored by defense.
+
+### `sack`
+*int* or *float* -- Point value awarded for a sack.
+
+### `forced_fumble`
+*int* or *float* -- Point value awarded for a forced fumble.
+
+### `fumble_recovery`
+*int* or *float* -- Point value awarded for a fumble recovery.
+
+### `interception`
+*int* or *float* -- Point value awarded for a defensive interception.
+
+### `tackle_for_loss`
+*int* or *float* -- Point value awarded for a tackle for loss.
+
+### `pass_defended`
+*int* or *float* -- Point value awarded for a pass defended.
 
