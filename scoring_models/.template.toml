@@ -1,5 +1,8 @@
 model_name = "Base template"
-description = "This is a template for building a new scoring model. All available fields are listed in this document. For documentation on what each of these fields represents, please see documentation."
+description = """\
+    This is a template for building a new scoring model. All available fields \
+    are listed in this document. For explanation of what each of these fields \
+    represents, please see documentation."""
 
 [metadata]
 decimal = true
