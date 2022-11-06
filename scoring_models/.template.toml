@@ -65,13 +65,11 @@ extra_point_miss = -1
     touchdown = 6
     safety = 2
     sack = 1
+    forced_fumble = 0
     fumble_recovery = 2
     interception = 2
     tackle_for_loss = 0.5
     pass_defended = 0.25
-    blocked_field_goal = 3
-    blocked_extra_point = 1
-    blocked_punt = 2
 
     points_allowed = [
         {range_min = 0, range_max = 0, points = 6},
@@ -138,3 +136,6 @@ extra_point_miss = -1
     punt_return_td = 6
     extra_point_return = 2
     two_point_return = 2
+    blocked_field_goal = 3
+    blocked_extra_point = 1
+    blocked_punt = 2
