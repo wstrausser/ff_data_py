@@ -189,3 +189,49 @@ Scoring parameters for team-based defense/special teams scoring.
 ### `pass_defended`
 *int* or *float* -- Point value awarded for a pass defended.
 
+### `two_point_return`
+*int* or *float* -- Point value awarded for returning a two-point conversion attempt to the offensive team's endzone.
+
+### `points_allowed`
+*inline table* -- Defines the ranges for awarding points based on defensive points allowed. Each row in the table must contain the following three values: `range_min`, `range_max`, and `points`. For instance, if the table includes the row `{ range_min = 18, range_max = 21, points = 0.25 }`, a defense allowing 20 points in a game will be awarded 0.25 fantasy points. `range-min` and `range-max` are both inclusive.
+
+### `points_allowed_deduction_threshold`
+*int* -- Defines the threshold from which defenses will be deducted fantasy points for points allowed above the threshold.
+
+### `points_allowed_deduction_interval`
+*int* -- Defines the interval at which points will be deducted above the `points_allowed_deduction_threshold`.
+
+### `points_allowed_deduction`
+*int* or *float* -- Point value awarded (deducted) for every *n* defensive points allowed above the `points_allowed_deduction_threshold` (*n* = `points_alowed_deduction_interval`).
+
+### `yards_allowed`
+*inline table* -- Defines the ranges for awarding points based on defensive yards allowed. Each row in the table must contain the following three values: `range_min`, `range_max`, and `points`. For instance, if the table includes the row `{ range_min = 206, range_max = 210, points = 1.9 }`, a defense allowing 208 yards in a game will be awarded 1.9 fantasy points. `range-min` and `range-max` are both inclusive.
+
+### `points_allowed_deduction_threshold`
+*int* -- Defines the threshold from which defenses will be deducted fantasy points for yards allowed above the threshold.
+
+### `yards_allowed_deduction_interval`
+*int* -- Defines the interval at which points will be deducted above the `yards_allowed_deduction_threshold`.
+
+### `yards_allowed_deduction`
+*int* or *float* -- Point value awarded/deducted for every *n* yards allowed above the `yards_allowed_deduction_threshold` (*n* = `yards_alowed_deduction_interval`).
+
+## `dst.special_teams`
+
+### `kick_return_td`
+*int* or *float* -- Point value awarded for each kick return touchdown.
+
+### `punt_return_td`
+*int* or *float* -- Point value awarded for each punt return touchdown.
+
+### `extra_point_return`
+*int* or *float* -- Point value awarded for returning an extra point attempt to the kicking team's endzone.
+
+### `blocked_field_goal`
+*int* or *float* -- Point value awarded for blocking a field goal attempt.
+
+### `blocked_extra_point`
+*int* or *float* -- Point value awarded for blocking an extra point attempt.
+
+### `blocked_punt`
+*int* or *float* -- Point value awarded for blocking a punt.
