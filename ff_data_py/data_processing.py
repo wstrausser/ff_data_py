@@ -1,4 +1,5 @@
-"""This module handles data processing for ff_data_py.
+"""
+This module handles data processing for ff_data_py.
 """
 
 import pandas as pd

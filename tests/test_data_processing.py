@@ -1,4 +1,5 @@
-"""Tests for the data_processing module.
+"""
+Tests for the data_processing module.
 """
 
 from ff_data_py import data_processing as dp
