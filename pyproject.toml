@@ -6,5 +6,10 @@ authors = [
     { name = "William Strausser", email = "william.e.strausser@gmail.com" }
 ]
 dependencies = [
-    "nfl-data-py==0.3.0"
+    "nfl-data-py==0.3.0",
+]
+
+[project.optional-dependencies]
+tests = [
+  'pytest',
 ]
